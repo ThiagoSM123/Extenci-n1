@@ -1,0 +1,29 @@
+// Función para mostrar los datos del video en el popup
+function showVideoData(data) {
+    // Obtener el elemento donde se mostrarán los datos
+    var container = document.getElementById("video-data");
+
+    // Limpiar el contenido anterior
+    container.innerHTML = "";
+
+    // Agregar los datos del video
+    var channelTitle = document.createElement("p");
+    channelTitle.innerText = "YouTuber: " + data.snippet.channelTitle;
+    container.appendChild(channelTitle);
+
+    var title = document.createElement("p");
+    title.innerText = "Título: " + data.snippet.title;
+    container.appendChild(title);
+
+    var description = document.createElement("p");
+    description.innerText = "Descripción: " + data.snippet.description;
+    container.appendChild(description);
+
+    var tags = document.createElement("p");
+    tags.innerText = "Tags: " + data.snippet.tags;
+    container.appendChild(tags);
+    
+    var publishedAt = document.createElement("p");
+    publishedAt.innerText = "Tags: " + data.snippet.publishedAt;
+    container.appendChild(publishedAt);
+}

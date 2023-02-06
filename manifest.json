@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "YouTube API Extension",
+  "version": "1.0",
+  "description": "An extension that accesses the YouTube API",
+  "permissions": [
+    "https://www.googleapis.com/",
+    "activeTab",
+    "downloads"
+  ],
+  "background": {
+    "scripts": [
+      "background.js",
+      "download.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  }
+}
